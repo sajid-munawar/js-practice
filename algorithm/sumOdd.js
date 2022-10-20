@@ -1,13 +1,14 @@
 function sumFibs(num) {
-    var a = 1, b = 1, c = 0;
+    var a = 1, b = 1, sum = 1;
     while (b <= num) {
         if (b % 2 !== 0) {
-            c += b;
+            sum += b;
         }
+        let temp = b;
         b += a;
-        a = b - a;
+        a = temp;
     }
-    return c;
+    return sum;
 }
 
-console.log(sumFibs(10));
+console.log(sumFibs(4));
